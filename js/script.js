@@ -17,6 +17,7 @@ let path = window.location.pathname;
 let page = path.split("/").pop();
 let labels = '';
 let navlinks = document.querySelectorAll('.nav-link');
+
 for (const a of navlinks) {
      if(a.href.split("/").pop() === page){
         a.classList.add('active');
