@@ -15,7 +15,7 @@ console.log(endpoint + new URLSearchParams(queryParams));
 fetch(endpoint + new URLSearchParams(queryParams))
 .then(response => {
     if(response.status !== 200){
-        getNoResult(resultsSection);
+        getNoResult(recipeSection);
         return;
     }
     return response.json()})
@@ -24,7 +24,7 @@ fetch(endpoint + new URLSearchParams(queryParams))
 })
 .catch((error) => {
     console.error('Error:', error);
-    // getNoResult(resultsSection);
+    getNoResult(recipeSection);
 });   
 
 function getRecipeDetails(recipe){
@@ -202,4 +202,10 @@ function getAmountForServing(nutrient){
     }else{
         return '-';
     }
+}
+
+function getNoResult(section){
+    let h = document.createElement('h1');
+    h.textContent = 'Sorry no result...';
+    section.appendChild(h);
 }

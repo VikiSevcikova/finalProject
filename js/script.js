@@ -237,7 +237,6 @@ function getNoResult(section){
         h.textContent = 'Sorry no result...';
         section.appendChild(h);
     }
-
 }
 
 function getRecipe(searchResults, data){
