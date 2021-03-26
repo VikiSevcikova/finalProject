@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Search Page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/90a8f3d511.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="index.html"><img src="sbTransp2.png" alt="" style="width: 70px; height: 70px;"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html"> Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="glutenFreePage.html"> Gluten-Free <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="dairyFreePage.html"> Dairy-Free </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lowCarbPage.html"> Low-Carb </a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="banner-results container-fluid">
+            
+          </div>
+
+          <div class="recipes">
+            <form class="form-inline my-2 my-lg-0">
+                <div class="search-input">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search recipe..." aria-label="Search">
+                    <div class="autocomplete">
+                       
+                    </div>
+                </div>
+                <button id="search-btn" class="btn btn-warning my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+            <section>
+              <h2 class="results-title">Please submit recipe above</h2>
+              <div class="search-results">
+
+              </div>
+              <ul class="pagination justify-content-center">
+                  <li class="page-item hidden">
+                    <a id="previous-btn" class="page-link" href="#" tabindex="-1">Previous</a>
+                  </li>
+                  <li class="page-item hidden">
+                    <a id="next-btn" class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+          </section>
+          </div>
+
+        <footer>© 2021 Simonett's Blog</footer>
+        <script src="js/api_keys.js"></script>
+        <script src="js/script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>

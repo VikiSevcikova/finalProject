@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import 'colors', 'recipe';
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // font-family: 'Roboto', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+    position: relative;
+    background-color: $main-dark-color;
+
+    .nav-bar{
+        background-color: $dark-color;
+    }
+    .navbar-expand-lg{
+        font-size: 20px;
+    }
+    a{
+        color:$main-light-color !important;
+        
+        &:hover{
+            text-decoration: none;
+            color:$light-color !important;
+    
+        }
+        &.active{
+            color: $light-color !important;
+        }
+    }
+
+    .banner-results{
+        height: 700px;
+        .fill{
+            padding: 0;
+            &:hover .img-fluid{
+                opacity: 0.8;
+            } 
+            .img-fluid{
+                border: 5px solid $main-dark-color;
+                position: relative;
+                height: 350px;
+                width: 100%;
+                object-fit: cover;
+                margin:0;  
+            }
+            .text{
+                position: absolute;
+                bottom: 20px;
+                left: 10px;
+                .banner-title{
+                    font-size: 2vw;
+                    font-weight: bold;
+                    color: $main-dark-color;
+                }
+                .banner-labels{
+                    margin: 10px 0px;
+                    .banner-label{
+                        padding: 5px;
+                        border-radius: 5px;
+                        background: $main-light-color;
+                        font-size: 1vw;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        color:$main-dark-color;
+                    }
+                }
+            }
+            
+        }
+    }
+    .recipes{
+        margin-top: 20px;
+        width: 100%;
+        .form-inline{
+            width: 90%;
+            margin:auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;    
+            .search-input{
+                width: 95%; 
+                box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);                    
+                .form-control{
+                    padding: 10px 8px;
+                    width: 100%;    
+                    border: none;
+                    outline: none;
+                    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+                    &:hover{
+                        border: none;
+                        outline: none;
+                    }
+                    &:focus{
+                        border: none;
+                        outline: none;
+                    }
+                }
+             }
+             .btn{
+                min-width: 5%;
+                padding: 9px 20px;
+                background-color: $main-light-color;
+                border-color: $main-light-color;
+                &:hover{
+                    background-color: $light-color;
+                }
+            }
+        }
+        .results-title{
+            width: 90%;
+            margin: 20px auto;
+            color: $main-light-color;
+        }
+        .dairyfree-title, .glutenfree-title, .lowcarb-title{
+            width: 90%;
+            margin: 20px auto;
+            color: $main-light-color;
+        }
+        .dairyfree-results, .glutenfree-results, .lowcarb-results, .search-results{
+            min-height: 50vh;
+            width: 90%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 20px;
+            .recipe-card{
+                position: relative;
+                padding: 10px;
+                background-color: $light-color;
+                border-radius: 5px;
+                .card-img-top{
+                    height: 300px;
+                    width: 100%;
+                    object-fit: cover;
+                    margin:0;  
+                    padding: 10px;
+                }
+                .diet-labels{
+                    position: absolute;
+                    top: 20px;
+                    left: 30px;
+                    margin: 10px 0px;
+                    .diet-label{
+                        padding: 5px;
+                        border-radius: 5px;
+                        background: $main-light-color;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        color: $main-dark-color;
+                    }
+                }
+                .btn{
+                    padding: 9px 20px;
+                    background-color: $main-dark-color;
+                    border-color: $main-dark-color;
+                    color: $main-light-color;
+                    transition: all 0.2s;
+                    &:hover{
+                        background-color: $dark-color;
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+        .hidden{
+            visibility: hidden;
+        }
+    }
+    
+    .page-link{
+        background-color: $main-light-color;
+        color: $main-dark-color !important;
+        width: 200px;
+        margin: 20px;
+        padding: 10px 20px 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        text-align: center;
+        transition: all 0.2s;
+            &:hover{
+                background-color: $light-color;
+                color: $main-dark-color !important;
+                transform: scale(1.05);
+            }
+    }
+    
+    footer{
+        background-color: $light-color;
+        text-align: center;
+        font-size:  20px;
+        margin-top: 80px;
+        padding: 10px;
+    }
+    
+    
+}
+
+
+

@@ -1,0 +1,132 @@
+
+.recipe{
+    .recipe-title{
+        color: $main-light-color;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .labels{
+        width: 50%;
+        text-align: center;
+        margin: auto;
+        .label{
+            display: inline-block;
+            padding: 5px;
+            margin: 5px;
+            border-radius: 5px;
+            background: $main-light-color;
+            font-weight: bold;
+            text-transform: uppercase;
+            color:$main-dark-color;
+        }
+    }
+    .recipe-image{
+        width: 25vw;
+        margin: 20px auto;
+        img{
+            width: 25vw;
+            height: 25vw;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+
+    .recipe-details{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        width: 80%;
+        margin: auto;
+        .ingredients{
+            width: 50%;
+            min-height: 300px;
+            color: $main-light-color;
+            .list-group-item{
+                background-color: transparent;
+                border: none;
+                .custom-checkbox .custom-control-input:checked~.custom-control-label::after{
+                    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='black' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+                }
+                .custom-control-label{
+                    font-size: 20px;
+                    &::before{
+                        background-color: $main-light-color;
+                    }
+    
+                }
+            }
+            .cook-details{
+              display: flex;
+              align-items: flex-end;
+              justify-content: stretch;
+              color: $main-light-color;
+              h3{
+                margin: 10px 20px 10px 0px;
+              }
+            }
+            .btn{
+                // position: absolute;
+                // left: 50%;
+                margin-top: 20px;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 20px;
+                color: $main-dark-color !important;
+                transition: all 0.2s;
+                    &:hover{
+                        background-color: $light-color;
+                        transform: scale(1.05);
+                    }
+            }
+        }
+        
+      .nutritions{
+        border: 1px solid $main-light-color;
+        color: $main-light-color;
+        float: left;
+        width: 25%;
+        padding: 0.5rem;
+        .nutritions__title {
+          font-weight: bold;
+          font-size: 2rem;
+          margin: 0 0 0.25rem 0;
+        }
+        .nutritions__header {
+          border-bottom: 5px solid $main-light-color;
+          padding: 0 0 0.25rem 0;
+          margin: 0 0 0.5rem 0;
+          p {
+            margin: 0;
+          }
+        }
+        .nutritions__table {
+          border-collapse: collapse;
+          width: 100%;
+          thead tr {
+            th,
+            td {
+              border: 0;
+            }
+          }
+          th,
+          td {
+            font-weight: normal;
+            font-size: 20px;
+            text-align: left;
+            padding: 0.25rem 0;
+            border-top: 1px solid $main-light-color;
+            white-space: nowrap;
+          }
+          td {
+            &:last-child {
+              text-align: right;
+            }
+          }
+          .blank-cell {
+            width: 1rem;
+            border-top: 0;
+          }
+        }
+      }
+    }
+}
